@@ -82,8 +82,6 @@ class ProjectItem {
     const projectItemEl = document.getElementById(this.id);
     console.log(projectItemEl);
     let finishButton = projectItemEl.querySelector('button:last-of-type');
-    // const activateButton = projectItemEl.querySelector('#[activate]');
-    // activateButton.addEventListener('click', this.method.bind(null, this.id));
     finishButton = domHelper.clearEvent(finishButton);
     finishButton.textContent = type === 'active' ? 'Finish' : 'Activate';
     finishButton.addEventListener('click', this.method.bind(null, this.id));
